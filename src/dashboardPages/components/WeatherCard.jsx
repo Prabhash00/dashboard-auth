@@ -81,7 +81,7 @@ function WeatherCard() {
           </div>
           <p>Wind Speeds: {weather.current.wind_kph} kmph</p>
           <p>Humidity: {weather.current.humidity}</p>
-          <p>UV Index: {weather.current.uv}</p>
+          
         </div>
       )}
     </div>

@@ -4,9 +4,10 @@ import WeatherCard from "./components/WeatherCard";
 import ChartCard from "./components/ChartCard";
 import ImageCarousel from "./components/ImageCarousel";
 
+
 function MainFile() {
   return (
-    <main className="main-container bg-gray-400 pr-[17px]">
+    <main className="main-container bg-transparent pr-[17px] ">
       <div className="main-title">
         <h3>DASHBOARD</h3>
       </div>
@@ -21,18 +22,16 @@ function MainFile() {
         </div>
 
         <div className="card-inner  ">
-          <TimeCard />
+          <ImageCarousel/>
         </div>
 
         <div className="card-inner ">
           <WeatherCard />
         </div>
-        <div className="card-inner ">
-          <ImageCarousel/>
+        <div className="card-inner time-card">
+          <TimeCard />
         </div>
-        <div className="card-inner bg-red-400">
-          <h3>Charts</h3>
-        </div>
+        
       </div>
     </main>
   );

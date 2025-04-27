@@ -20,8 +20,8 @@ function Sidebar() {
       <div className="sidebar-title">
         <div className="sidebar-brand">
           <button
-            className="bg-[#42f5dd] p-1 cursor-pointer transition-all duration-350
-           hover:transform hover:scale-110 hover:shadow-lg hover:bg-[#b6f542] rounded"
+            className="bg-[#4281f5] p-1 cursor-pointer transition-all duration-350 text-[#ffffff]
+           hover:transform hover:scale-110 hover:shadow-lg hover:bg-[#f7aad4] rounded"
             onClick={handleLogOut}
           >
             LogOut

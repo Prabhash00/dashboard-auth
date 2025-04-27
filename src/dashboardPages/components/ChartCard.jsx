@@ -15,7 +15,7 @@ function ChartCard() {
 
   const chartOptions = {
     data,
-    height: 200,
+    height: 230,
     series: [
       {
         type: mode,
