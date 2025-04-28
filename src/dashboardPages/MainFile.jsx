@@ -8,9 +8,7 @@ import ImageCarousel from "./components/ImageCarousel";
 function MainFile() {
   return (
     <main className="main-container bg-transparent pr-[17px] ">
-      <div className="main-title">
-        <h3>DASHBOARD</h3>
-      </div>
+
 
       <div className="card-title">
         <div className="card-inner ">

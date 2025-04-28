@@ -45,7 +45,7 @@ function WeatherCard() {
   return (
     <div className="card-inner-weather">
       <div className="input-location">
-        <h3>Weather</h3>
+        <h3 className="header-title">Weather</h3>
         <br />
         <input
           type="text"
@@ -53,8 +53,9 @@ function WeatherCard() {
           value={inputCity}
           onChange={handleInputChange}
           onKeyDown={handleSearch}
+          className=" p-1 border rounded border-blue-500 mr-2"
         />
-        <button onClick={handleSearch}>Search</button>
+        <button className="className= border-none p-1 rounded-md bg-blue-500 text-white cursor-pointer hover:bg-blue-600" onClick={handleSearch}>Search</button>
       </div>
       <br />
       {error && (
@@ -81,7 +82,6 @@ function WeatherCard() {
           </div>
           <p>Wind Speeds: {weather.current.wind_kph} kmph</p>
           <p>Humidity: {weather.current.humidity}</p>
-          
         </div>
       )}
     </div>

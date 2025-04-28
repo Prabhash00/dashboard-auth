@@ -14,7 +14,7 @@ export default function TimeCard() {
 
   return (
     <div>
-      <h3>Current Time & Date</h3>
+      <h3 className="header-title">Current Time & Date</h3>
       <p>{now.toLocaleTimeString()}</p>
       <p>{now.toLocaleDateString()}</p>
       <br />

@@ -14,10 +14,10 @@ function Header() {
           <BsJustify className="icons"/>
         </div>
         <div className="search-right flex justify-end">
-          <BsSearch className="icons"/>
+          <BsSearch className="icons text-white"/>
         </div>
         <div className="person-right flex justify-end">
-          <BsPersonCircle className="icons"/>
+          <BsPersonCircle className="icons text-white"/>
         </div>
       </header>
     </>

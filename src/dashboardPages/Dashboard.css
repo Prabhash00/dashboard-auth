@@ -68,11 +68,12 @@ html,
 #sidebar {
   grid-area: sidebar;
   height: 100%;
-  background:transparent;
+  background: transparent;
   color: white;
   overflow-y: auto;
   transition: all 0.5s;
   -webkit-animation: all 0.5s;
+  box-shadow: 1px 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .sidebar-title {
@@ -134,8 +135,9 @@ html,
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 2rem;
-  margin-left: 20px;
+  margin-left: 50px;
   margin-bottom: 30px;
+  padding-top: 30px;
 }
 .card-title .time-card {
   grid-column: span 2;
@@ -144,7 +146,7 @@ html,
 
 .card-inner {
   padding: 15px;
-  filter: drop-shadow(10px 10px 15px gray);
+  filter: drop-shadow(3px 3px 5px rgb(78, 78, 78));
   background: white;
   height: 100%;
   width: 300px;
@@ -153,7 +155,11 @@ html,
 
 h3 {
   color: rgb(255, 254, 255);
-  text-shadow: rgb(54, 54, 54) 2px 0 3px;
+  /* text-shadow: rgb(54, 54, 54) 2px 0 3px; */
+  background-color: #b971d6;
+  margin: 0px 40px 10px;
+  border-radius: 10px;
+
 }
 
 .card-inner .time-calendar {
@@ -171,15 +177,15 @@ h3 {
 }
 
 .time-calendar .react-calendar__navigation {
-  flex: 0 0 30px; 
+  flex: 0 0 30px;
 }
 
 .time-calendar .react-calendar__tile {
-  height: 25px;         
-  line-height: 17px;    
-  font-size: 12px;      
-  padding: 0;           
-  overflow: hidden;     
+  height: 25px;
+  line-height: 17px;
+  font-size: 12px;
+  padding: 0;
+  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }

@@ -3,12 +3,12 @@ import React from "react";
 
 export default function ProfileCard() {
   const raw = sessionStorage.getItem("currentUser");
-  if (!raw) return <div className="card-inner">Not logged in</div>;
+  
 
   const user = JSON.parse(raw);
   return (
-    <div >
-      <h3>Profile Summary/Account Info</h3>
+    <div>
+      <h3 className="header-title">Account Info</h3>
       <br />
       <p>
         <strong>Name:</strong> {user.name}
@@ -19,6 +19,7 @@ export default function ProfileCard() {
       <p>
         <strong>Password:</strong> {user.password}
       </p>
+      <br />
       <p>
         <strong>Type Of Token Storage: </strong> sessionStorage
       </p>
