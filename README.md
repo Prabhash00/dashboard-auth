@@ -1,115 +1,99 @@
-📊 Dashboard App (React + Vite)
-A beautiful frontend-only dashboard built with React.js and Vite, featuring:
+# Dashboard Auth
 
-🔒 Simple user authentication
+A minimal and beautiful dashboard application built with **React** and **Vite**, featuring essential functionalities such as authentication, charts, weather updates, and a photo slider.
 
-📈 Dynamic sales data chart
 
-🧑 User profile info
+## 🚀 Features
 
-⏰ Live clock + analog clock
+- **Authentication**: Secure login and registration system.
+- **Interactive Charts**: Visualize data with clean and responsive charts.
+- **Weather Updates**: Get real-time weather information.
+- **Photo Slider**: Showcase images with a smooth and elegant photo slider.
 
-☁️ Weather info based on city
+## 🛠 Tech Stack
 
-🖼 Auto-rotating image carousel
+- **Frontend**: React, CSS, HTML
+- **Build Tool**: Vite
 
-📂 Project Structure
-pgsql
-Copy
-Edit
-src/
-├── App.jsx
-├── index.jsx
-├── login/
-│   ├── Login.jsx
-│   └── Login.css
-├── dashboardPages/
-│   ├── Dashboard.jsx
-│   ├── Dashboard.css
-│   ├── Header.jsx
-│   ├── Sidebar.jsx
-│   ├── MainFile.jsx
-│   └── components/
-│       ├── ChartCard.jsx
-│       ├── ProfileCard.jsx
-│       ├── TimeCard.jsx
-│       ├── WeatherCard.jsx
-│       ├── PictureSlider.jsx
-🚀 How to Run Locally
-Clone the repository:
+## 📂 Project Structure
 
-bash
-Copy
-Edit
-git clone https://github.com/your-username/dashboard-app.git
-cd dashboard-app
-Install dependencies:
+```
+dashboard-auth/
+├── src/
+│   ├── components/       # Reusable React components
+│   ├── pages/            # Application pages
+│   ├── assets/           # Static assets (images, icons, etc.)
+│   ├── styles/           # CSS files
+│   ├── utils/            # Utility functions
+│   └── App.jsx           # Root React component
+├── public/               # Public assets and index.html
+├── package.json          # Project dependencies and scripts
+└── README.md             # Project documentation
+```
 
-bash
-Copy
-Edit
-npm install
-Start development server:
+## 🚀 Getting Started
 
-bash
-Copy
-Edit
-npm run dev
-(Default runs at http://localhost:5173)
+Follow these steps to set up your local development environment.
 
-🎯 Features Implemented
-Authentication: Login and SignUp stored using sessionStorage.
+### Prerequisites
 
-Sales Chart: Dynamic chart (toggle between bar and line) using ag-charts-react.
+- **Node.js** (v16 or later)
+- **npm** or **yarn**
 
-Profile Info: Displays user name, email, password after login.
+### Installation
 
-Clock: Shows current digital time + analog clock using react-clock.
+1. Clone the repository:
 
-Weather Info: Displays current temperature and weather using WeatherAPI.
+   ```bash
+   git clone https://github.com/Prabhash00/dashboard-auth.git
+   cd dashboard-auth
+   ```
 
-Image Carousel: Auto-sliding photo gallery using react-slick.
+2. Install dependencies:
 
-📸 Dashboard Overview
+   ```bash
+   npm install
+   ```
 
-Feature	Status
-User Authentication	✅ Done
-Sales Chart (bar/line toggle)	✅ Done
-User Profile Display	✅ Done
-Real-time Clock + Analog Clock	✅ Done
-Weather Info with API	✅ Done
-Photo Art Image Carousel	✅ Done
-6th Card	❌ Empty / Future Use
-🔑 Notes
-Weather API Key must be set manually inside WeatherCard.jsx.
+3. Start the development server:
 
-Images for the photo carousel should be stored in /public/photos/.
+   ```bash
+   npm run dev
+   ```
 
-This project is frontend-only — no backend/database.
+4. Open your browser and navigate to `http://localhost:3000`.
 
-User session clears on page refresh (uses sessionStorage, not localStorage).
+## 📸 Screenshots
 
-🛠 Tech Stack
-React.js
+Add screenshots of your application here to showcase its features.
 
-Vite
+## 🌟 Contributing
 
-Tailwind CSS (optional)
+Contributions are welcome! Feel free to submit issues or pull requests to help improve the project.
 
-ag-charts-react
+1. Fork the repository.
+2. Create a new branch:
 
-react-clock
+   ```bash
+   git checkout -b feature-name
+   ```
 
-react-slick
+3. Commit your changes:
 
-📝 Future Improvements (Optional)
-Fill 6th card (e.g., World Clock, Device Info, News Feed)
+   ```bash
+   git commit -m "Add feature-name"
+   ```
 
-Add dark/light theme toggle
+4. Push to your branch:
 
-Save user settings (favorite city, profile picture)
+   ```bash
+   git push origin feature-name
+   ```
 
-Deploy on GitHub Pages or Vercel
+5. Open a pull request.
 
-🎯 Conclusion
-"A minimal and beautiful dashboard app made with React and Vite, featuring authentication, charts, weather, and a photo slider."
+## 📝 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
