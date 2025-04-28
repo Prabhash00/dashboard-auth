@@ -11,8 +11,8 @@ function Sidebar() {
   const navigate = useNavigate();
 
   const handleLogOut = () => {
-    sessionStorage.removeItem("currentUser"); 
-    navigate("/login"); 
+    sessionStorage.removeItem("currentUser");
+    navigate("/login");
   };
 
   return (
@@ -31,25 +31,25 @@ function Sidebar() {
       </div>
       <ul className="sidebar-list">
         <li className="sidebar-list-item">
-          <a href="">
+          <a href="#">
             <MdOutlineDashboard className="icons" />
             Dashboard
           </a>
         </li>
         <li className="sidebar-list-item">
-          <a href="">
+          <a href="#">
             <MdPerson className="icons" />
             Profile
           </a>
         </li>
         <li className="sidebar-list-item">
-          <a href="">
+          <a href="#">
             <MdQueryStats className="icons" />
             Stats
           </a>
         </li>
         <li className="sidebar-list-item">
-          <a href="">
+          <a href="#">
             <MdSettings className="icons" />
             Settings
           </a>
