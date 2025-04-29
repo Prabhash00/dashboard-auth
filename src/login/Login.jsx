@@ -12,7 +12,7 @@ function Login() {
     email: "",
     password: "",
   });
-  const navigate=useNavigate();
+  const navigate = useNavigate();
 
   const handleUserChange = (e) => {
     const { name, value } = e.target;
@@ -26,19 +26,15 @@ function Login() {
     const storedData = sessionStorage.getItem("userData");
     const users = JSON.parse(storedData);
 
-    if (formData.email.length !== 0 && formData.password.length !== 0) {
-      const user = users.find(
-        (u) => u.email === formData.email && u.password === formData.password
-      );
-      if (user) {
-        console.log("Logged In");
-        sessionStorage.setItem("currentUser",JSON.stringify(user))
-        navigate("/dashboard");
-      } else {
-        alert("Wrong Credentials");
-      }
+    const user = users.find(
+      (u) => u.email === formData.email && u.password === formData.password
+    );
+    if (user) {
+      console.log("Logged In");
+      sessionStorage.setItem("currentUser", JSON.stringify(user));
+      navigate("/dashboard");
     } else {
-      alert("Enter Credentials first");
+      alert("Wrong Credentials");
     }
   };
 
@@ -53,16 +49,11 @@ function Login() {
     if (sessionStorage.getItem("userData")) {
       users = JSON.parse(sessionStorage.getItem("userData"));
     }
-    if (
-      newUser.name.length !== 0 &&
-      newUser.email.length !== 0 &&
-      newUser.password.length !== 0
-    ) {
-      users.push(newUser);
-      sessionStorage.setItem("userData", JSON.stringify(users));
-    } else {
-      alert("Fill all the Details");
-      return;
+    if(newUser.name.length !==0){
+    users.push(newUser);
+    sessionStorage.setItem("userData", JSON.stringify(users));}
+    else{
+      alert("Enter Name");
     }
     setFormData({ name: "", email: "", password: "" });
   };
@@ -71,6 +62,7 @@ function Login() {
     e.preventDefault();
     const currentAction = action;
     currentAction === "Sign Up" ? handleSignUp() : checkLogin();
+    setAction("Login");
   };
 
   return (
@@ -93,7 +85,7 @@ function Login() {
           Login
         </button>
       </div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="inputs mt-[40px] flex flex-col gap-[25px]">
           <div className={action === "Login" ? "input hidden-input" : "input"}>
             <IoPersonOutline className="signup-icons" />
@@ -113,6 +105,7 @@ function Login() {
               name="email"
               onChange={handleUserChange}
               value={formData.email}
+              required
             />
           </div>
           <div className="input">
@@ -123,17 +116,15 @@ function Login() {
               name="password"
               onChange={handleUserChange}
               value={formData.password}
+              required
             />
           </div>
           <div className="submit-btn">
-            <button type="button" onClick={handleSubmit}>
-              Submit
-            </button>
+            <button type="submit">Submit</button>
           </div>
         </div>
       </form>
       <br />
-      <p>Post Sign-up, Go to Login</p>
     </div>
   );
 }

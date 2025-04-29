@@ -7,13 +7,8 @@ import {
 } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
-function Sidebar() {
+function Sidebar({ handleLogOut }) {
   const navigate = useNavigate();
-
-  const handleLogOut = () => {
-    sessionStorage.removeItem("currentUser");
-    navigate("/login");
-  };
 
   return (
     <aside id="sidebar">
@@ -31,28 +26,53 @@ function Sidebar() {
       </div>
       <ul className="sidebar-list">
         <li className="sidebar-list-item">
-          <a href="#">
-            <MdOutlineDashboard className="icons" />
-            Dashboard
-          </a>
+          <MdOutlineDashboard className="icons" onClick={() => {}} />
+          Dashboard
         </li>
         <li className="sidebar-list-item">
-          <a href="#">
-            <MdPerson className="icons" />
-            Profile
-          </a>
+          <MdPerson
+            className="icons"
+            onClick={() => {
+              navigate("/");
+            }}
+          />
+          Profile
         </li>
         <li className="sidebar-list-item">
-          <a href="#">
-            <MdQueryStats className="icons" />
-            Stats
-          </a>
+          <MdQueryStats
+            className="icons"
+            onClick={() => {
+              navigate("/");
+            }}
+          />
+          Stats
         </li>
         <li className="sidebar-list-item">
-          <a href="#">
-            <MdSettings className="icons" />
-            Settings
-          </a>
+          <MdSettings
+            className="icons"
+            onClick={() => {
+              navigate("/");
+            }}
+          />
+          Photo Gallery
+        </li>
+        <li className="sidebar-list-item">
+          <MdSettings
+            className="icons"
+            onClick={() => {
+              navigate("/");
+            }}
+          />
+          Weather
+        </li>
+        <li className="sidebar-list-item">
+          <MdSettings
+            className="icons"
+            onClick={() => {
+              navigate("/");
+            }}
+          />
+          Settings
         </li>
       </ul>
     </aside>
