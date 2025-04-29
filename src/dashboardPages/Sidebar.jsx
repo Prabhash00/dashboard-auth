@@ -1,10 +1,12 @@
 import React from "react";
+import { IoMdPhotos } from "react-icons/io";
 import {
   MdOutlineDashboard,
   MdPerson,
   MdQueryStats,
   MdSettings,
 } from "react-icons/md";
+import { TiWeatherPartlySunny } from "react-icons/ti";
 import { useNavigate } from "react-router-dom";
 
 function Sidebar({ handleLogOut }) {
@@ -30,12 +32,7 @@ function Sidebar({ handleLogOut }) {
           Dashboard
         </li>
         <li className="sidebar-list-item">
-          <MdPerson
-            className="icons"
-            onClick={() => {
-              navigate("/");
-            }}
-          />
+          <MdPerson className="icons" />
           Profile
         </li>
         <li className="sidebar-list-item">
@@ -48,7 +45,7 @@ function Sidebar({ handleLogOut }) {
           Stats
         </li>
         <li className="sidebar-list-item">
-          <MdSettings
+          <IoMdPhotos
             className="icons"
             onClick={() => {
               navigate("/");
@@ -56,13 +53,13 @@ function Sidebar({ handleLogOut }) {
           />
           Photo Gallery
         </li>
-        <li className="sidebar-list-item">
-          <MdSettings
-            className="icons"
-            onClick={() => {
-              navigate("/");
-            }}
-          />
+        <li
+          className="sidebar-list-item"
+          onClick={() => {
+            navigate("/weather");
+          }}
+        >
+          <TiWeatherPartlySunny className="icons" />
           Weather
         </li>
         <li className="sidebar-list-item">

@@ -31,11 +31,11 @@ function ChartCard() {
 
   return (
     <div>
-      <h3 className="header-title">Charts</h3>
+      
       <AgCharts options={chartOptions} />
       <button
         onClick={changeMode}
-        className="toggle-btn border-none p-1 rounded-md bg-blue-500 text-white cursor-pointer hover:bg-blue-600"
+        className="toggle-btn button-global"
       >
         Switch to {mode === "bar" ? "Line" : "Bar"} Chart
       </button>

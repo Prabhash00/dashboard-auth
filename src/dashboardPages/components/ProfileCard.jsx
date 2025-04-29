@@ -8,7 +8,7 @@ export default function ProfileCard() {
   const user = JSON.parse(raw);
   return (
     <div>
-      <h3 className="header-title">Account Info</h3>
+      
       <br />
       <p>
         <strong>Name:</strong> {user.name}

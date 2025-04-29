@@ -18,7 +18,7 @@ function ImageCarousel() {
   ];
   return (
     <div className="box">
-      <h3>Image Carousel</h3>
+      
       <Carousel useKeyboardArrows autoPlay interval={1500} infiniteLoop>
         {images.map((URL, index) => (
           <div className="slide" key={index}>

@@ -52,7 +52,7 @@ function Header({ handleLogOut, mode, changeMode }) {
                   handleLogOut();
                   setIsDropdownOpen(false);
                 }}
-                className="block w-full text-left px-2 py-1 hover:bg-gray-100"
+                className="header-logout block w-full text-left px-2 py-1 hover:bg-gray-100"
               >
                 LogOut
               </button>

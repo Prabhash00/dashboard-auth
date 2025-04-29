@@ -1,68 +1,35 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import useWeather from "../../hooks/useWeather";
 
 function WeatherCard() {
-  const [weather, setWeather] = useState();
-  const [inputCity, setInputCity] = useState("");
-  const [city, setCity] = useState("");
-  const [error, setError] = useState();
-  const apiKey = "aba64ab52ab9448fb4b150533252604";
-
-  useEffect(() => {
-    const fetchWeather = async () => {
-      try {
-        const response = await fetch(
-          `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`
-        );
-        if (!response.ok) {
-          throw new Error(
-            "Failed to fetch weather data. Enter City name first."
-          );
-        }
-        const data = await response.json();
-        setWeather(data);
-        setError(null);
-      } catch (err) {
-        setError(err.message);
-        setWeather(null);
-      }
-    };
-
-    fetchWeather();
-  }, [city]);
-
-  const handleInputChange = (e) => {
-    setInputCity(e.target.value);
-  };
-
-  const handleSearch = (e) => {
-    if (e.key === "Enter" || e.type === "Click") {
-      if (inputCity.trim() !== "") {
-        setCity(inputCity.trim());
-      }
-    }
-  };
+  const { weather, inputCity, error, handleInputChange, handleSearch } =
+    useWeather();
 
   return (
     <div className="card-inner-weather">
-      <div className="input-location">
-        <h3 className="header-title">Weather</h3>
-        <br />
+      <div className="input-location mt-4">
         <input
           type="text"
           placeholder="Enter City"
           value={inputCity}
           onChange={handleInputChange}
           onKeyDown={handleSearch}
-          className=" p-1 border rounded border-blue-500 mr-2"
+          className="p-1 border rounded border-blue-500 mr-2"
         />
-        <button className="className= border-none p-1 rounded-md bg-blue-500 text-white cursor-pointer hover:bg-blue-600" onClick={handleSearch}>Search</button>
+        <button className="button-global" onClick={handleSearch}>
+          Search
+        </button>
       </div>
       <br />
+
       {error && (
-        <p>
-          <strong>Error</strong>: {error}
-        </p>
+        <div className="text-center mt-4">
+          <p>
+            <strong>Error:</strong> {error}
+          </p>
+        </div>
       )}
+
       {weather && (
         <div>
           <p>
