@@ -8,7 +8,7 @@ import "./App.css";
 import Dashboard from "./dashboardPages/Dashboard";
 import Login from "./login/Login";
 import ProtectedRoute from "./ProtectedRoute";
-import WeatherPage from "./dashboardPages/components/sidebarComponents/WeatherPAge";
+import WeatherPage from "./dashboardPages/components/sidebarComponents/WeatherPage";
 
 
 function App() {
