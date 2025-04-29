@@ -115,18 +115,27 @@ html,
 .sidebar-list-item {
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 15px 30px;
   font-size: 18px;
+  background: transparent;
+  color: white;
+  width: 100%;
+  border: none;
+  cursor: pointer;
 }
+
+
 
 .sidebar-list-item .icons {
   margin-right: 10px;
+  font-size: 27px;
 }
 
 .sidebar-list-item:hover {
   background-color: rgb(122, 84, 165);
   cursor: pointer;
 }
+
 .header-logout {
   position: relative;
   z-index: 15;
@@ -158,14 +167,14 @@ html,
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 2rem;
-  margin-left: 50px;
+  margin-left: 20px;
   margin-bottom: 30px;
   padding-top: 30px;
 }
 
 .card-title .time-card {
   grid-column: span 2;
-  width: 100%;
+  width: 97%;
 }
 
 .card-inner {

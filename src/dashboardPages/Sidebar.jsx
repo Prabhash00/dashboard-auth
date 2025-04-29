@@ -27,24 +27,42 @@ function Sidebar({ handleLogOut }) {
         <span className="icon close_icon">X</span>
       </div>
       <ul className="sidebar-list">
-        <li className="sidebar-list-item">
-          <MdOutlineDashboard className="icons" onClick={() => {}} />
+        <li
+          className="sidebar-list-item"
+          onClick={() => {
+            navigate("/weather");
+          }}
+        >
+          <MdOutlineDashboard className="icons" />
           Dashboard
         </li>
-        <li className="sidebar-list-item">
+
+        <li
+          className="sidebar-list-item"
+          onClick={() => {
+            navigate("/weather");
+          }}
+        >
           <MdPerson className="icons" />
           Profile
         </li>
-        <li className="sidebar-list-item">
-          <MdQueryStats
-            className="icons"
-            onClick={() => {
-              navigate("/");
-            }}
-          />
+
+        <li
+          className="sidebar-list-item"
+          onClick={() => {
+            navigate("/chart");
+          }}
+        >
+          <MdQueryStats className="icons" />
           Stats
         </li>
-        <li className="sidebar-list-item">
+
+        <li
+          className="sidebar-list-item"
+          onClick={() => {
+            navigate("/weather");
+          }}
+        >
           <IoMdPhotos
             className="icons"
             onClick={() => {
@@ -53,6 +71,7 @@ function Sidebar({ handleLogOut }) {
           />
           Photo Gallery
         </li>
+
         <li
           className="sidebar-list-item"
           onClick={() => {
@@ -62,13 +81,16 @@ function Sidebar({ handleLogOut }) {
           <TiWeatherPartlySunny className="icons" />
           Weather
         </li>
-        <li className="sidebar-list-item">
+
+        <li
+          className="sidebar-list-item"
+          onClick={() => {
+            navigate("/weather");
+          }}
+        >
           <MdSettings
             className="icons"
-            onClick={() => {
-              navigate("/");
-            }}
-          />
+            />
           Settings
         </li>
       </ul>
