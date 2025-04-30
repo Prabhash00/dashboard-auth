@@ -10,6 +10,7 @@ import Login from "./login/Login";
 import ProtectedRoute from "./ProtectedRoute";
 import WeatherPage from "./dashboardPages/components/sidebarComponents/WeatherPage";
 import ChartPage from "./dashboardPages/components/sidebarComponents/ChartPage";
+import PhotoPage from "./dashboardPages/components/sidebarComponents/PhotoPage";
 
 function App() {
   return (
@@ -25,7 +26,8 @@ function App() {
           }
         />
         <Route path="/weather" element={<WeatherPage />} />
-        <Route path="/chart" element={<ChartPage/>} />
+        <Route path="/pic" element={<PhotoPage />} />
+        <Route path="/chart" element={<ChartPage />} />
         <Route path="*" element={<Navigate to="/dashboard" />} />
       </Routes>
     </Router>

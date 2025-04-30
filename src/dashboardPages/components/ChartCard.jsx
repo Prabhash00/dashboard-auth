@@ -22,7 +22,7 @@ function ChartCard() {
     width: 280,
     margin: 10,
     padding: {
-      top: 70,
+      top: 20,
       bottom: 20,
       left: 2,
       right: 2,

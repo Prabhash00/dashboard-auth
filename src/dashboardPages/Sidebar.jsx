@@ -60,15 +60,10 @@ function Sidebar({ handleLogOut }) {
         <li
           className="sidebar-list-item"
           onClick={() => {
-            navigate("/weather");
+            navigate("/pic");
           }}
         >
-          <IoMdPhotos
-            className="icons"
-            onClick={() => {
-              navigate("/");
-            }}
-          />
+          <IoMdPhotos className="icons" />
           Photo Gallery
         </li>
 
@@ -88,9 +83,7 @@ function Sidebar({ handleLogOut }) {
             navigate("/weather");
           }}
         >
-          <MdSettings
-            className="icons"
-            />
+          <MdSettings className="icons" />
           Settings
         </li>
       </ul>
