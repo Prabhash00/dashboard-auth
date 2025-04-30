@@ -18,7 +18,7 @@ function MainFile() {
           <ProfileCard />
         </div>
 
-        <div className="card-inner  ">
+        <div className="card-inner ">
           <h3>Image Carousel</h3>
           <ImageCarousel />
         </div>

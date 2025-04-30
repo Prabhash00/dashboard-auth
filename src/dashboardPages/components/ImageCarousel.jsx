@@ -16,7 +16,7 @@ function ImageCarousel({ className }) {
 
   return (
     <div
-      className={`w-full max-w-2xl mx-auto p-3 bg-white rounded-lg ${className}`}
+      className={`w-full max-w-2xl mx-auto p-0.5  bg-white rounded-lg ${className}`}
     >
       <Carousel
         useKeyboardArrows

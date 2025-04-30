@@ -10,7 +10,7 @@ function WeatherPage() {
   return (
     <div className="card-inner-weather bg-white rounded-lg p-3 w-[750px]">
       <div className="header-weather flex justify-center items-center w-auto">
-        <h3 className="header-title p-1.5">Weather Info</h3>
+        <h3 className="header-title p-2">Weather Info</h3>
       </div>
       <div className="input-location ">
         <input

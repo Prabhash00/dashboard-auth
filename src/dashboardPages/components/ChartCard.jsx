@@ -18,7 +18,7 @@ function ChartCard() {
     title: {
       text: "Ice Cream Sales",
     },
-    height: 270,
+    height: 240,
     width: 280,
     margin: 10,
     padding: {

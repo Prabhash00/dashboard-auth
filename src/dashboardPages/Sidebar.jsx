@@ -40,7 +40,7 @@ function Sidebar({ handleLogOut }) {
         <li
           className="sidebar-list-item"
           onClick={() => {
-            navigate("/weather");
+            navigate("/profile");
           }}
         >
           <MdPerson className="icons" />
