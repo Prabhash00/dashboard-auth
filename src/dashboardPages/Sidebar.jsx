@@ -30,7 +30,7 @@ function Sidebar({ handleLogOut }) {
         <li
           className="sidebar-list-item"
           onClick={() => {
-            navigate("/weather");
+            navigate("/dashboard");
           }}
         >
           <MdOutlineDashboard className="icons" />
@@ -80,7 +80,7 @@ function Sidebar({ handleLogOut }) {
         <li
           className="sidebar-list-item"
           onClick={() => {
-            navigate("/weather");
+            navigate("/settings");
           }}
         >
           <MdSettings className="icons" />
