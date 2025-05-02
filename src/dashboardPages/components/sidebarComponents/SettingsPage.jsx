@@ -9,7 +9,8 @@ function SettingsPage() {
   const [isEditing, setIsEditing] = useState(false);
   const [editedUser, setEditedUser] = useState({ ...storedUser });
 
-  const handleSave = () => {
+  const handleSave = (e) => {
+    e.prevent.Default();
     sessionStorage.setItem("currentUser", JSON.stringify(editedUser));
     setUser(editedUser);
     setIsEditing(false);
@@ -59,58 +60,62 @@ navigate("/login")
         </div>
       ) : (
         <div>
-          <label>
-            <strong>Name: </strong>
-            <input
-              type="text"
-              value={editedUser.name}
-              onChange={(e) =>
-                setEditedUser({ ...editedUser, name: e.target.value })
-              }
-            />
-          </label>
-          <br />
-          <label>
-            <strong>Email: </strong>
-            <input
-              type="email"
-              value={editedUser.email}
-              onChange={(e) =>
-                setEditedUser({ ...editedUser, email: e.target.value })
-              }
-            />
-          </label>
-          <br />
-          <label>
-            <strong>Password: </strong>
-            <input
-              type="password"
-              value={editedUser.password}
-              onChange={(e) => {
-                setEditedUser({ ...editedUser, password: e.target.value });
-              }}
-            />
-          </label>
-          <br />
-          <button
-            className="bg-yellow-500 hover:bg-yellow-600 rounded-lg p-1 pl-1.5 pr-1.5 m-2
+          <form onClick={handleSave}>
+            <label>
+              <strong>Name: </strong>
+              <input
+                type="text"
+                value={editedUser.name}
+                onChange={(e) =>
+                  setEditedUser({ ...editedUser, name: e.target.value })
+                }
+              />
+            </label>
+            <br />
+            <label>
+              <strong>Email: </strong>
+              <input
+                type="email"
+                value={editedUser.email}
+                onChange={(e) =>
+                  setEditedUser({ ...editedUser, email: e.target.value })
+                }
+              />
+            </label>
+            <br />
+            <label>
+              <strong>Password: </strong>
+              <input
+                type="password"
+                value={editedUser.password}
+                onChange={(e) => {
+                  setEditedUser({ ...editedUser, password: e.target.value });
+                }}
+              />
+            </label>
+            <br />
+            <button
+              className="bg-yellow-500 hover:bg-yellow-600 rounded-lg p-1 pl-1.5 pr-1.5 m-2
              text-white cursor-pointer"
-            onClick={handleSave}
-          >
-            Save
-          </button>
-          <button
-            className="bg-green-500 hover:bg-green-700 rounded-lg p-1 pl-1.5 pr-1.5 m-2
+            >
+              Save
+            </button>
+            <button
+              className="bg-green-500 hover:bg-green-700 rounded-lg p-1 pl-1.5 pr-1.5 m-2
              text-white cursor-pointer"
-            onClick={() => setIsEditing(false)}
-          >
-            Cancel
-          </button>
+              onClick={() => setIsEditing(false)}
+            >
+              Cancel
+            </button>
+          </form>
         </div>
       )}
 
-      <button className="bg-red-500 hover:bg-red-700 rounded-lg p-1 pl-1.5 pr-1.5 m-2 mt-4
-       text-white cursor-pointer" onClick={handleDelete}>
+      <button
+        className="bg-red-500 hover:bg-red-700 rounded-lg p-1 pl-1.5 pr-1.5 m-2 mt-4
+       text-white cursor-pointer"
+        onClick={handleDelete}
+      >
         DELETE PROFILE
       </button>
     </div>

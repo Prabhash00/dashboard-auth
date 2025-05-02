@@ -1,7 +1,6 @@
 import React from "react";
 import { IoMdPhotos } from "react-icons/io";
 import {
-  MdOutlineDashboard,
   MdPerson,
   MdQueryStats,
   MdSettings,
@@ -27,16 +26,7 @@ function Sidebar({ handleLogOut }) {
         <span className="icon close_icon">X</span>
       </div>
       <ul className="sidebar-list">
-        <li
-          className="sidebar-list-item"
-          onClick={() => {
-            navigate("/dashboard");
-          }}
-        >
-          <MdOutlineDashboard className="icons" />
-          Dashboard
-        </li>
-
+        
         <li
           className="sidebar-list-item"
           onClick={() => {
