@@ -10,7 +10,7 @@ function SettingsPage() {
   const [editedUser, setEditedUser] = useState({ ...storedUser });
 
   const handleSave = (e) => {
-    e.prevent.Default();
+    e.preventDefault();
     sessionStorage.setItem("currentUser", JSON.stringify(editedUser));
     setUser(editedUser);
     setIsEditing(false);
