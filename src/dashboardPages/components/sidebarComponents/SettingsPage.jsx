@@ -60,7 +60,7 @@ navigate("/login")
         </div>
       ) : (
         <div>
-          <form onClick={handleSave}>
+          <form onSubmit={handleSave}>
             <label>
               <strong>Name: </strong>
               <input
@@ -94,7 +94,7 @@ navigate("/login")
               />
             </label>
             <br />
-            <button
+            <button type="submit"
               className="bg-yellow-500 hover:bg-yellow-600 rounded-lg p-1 pl-1.5 pr-1.5 m-2
              text-white cursor-pointer"
             >
