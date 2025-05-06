@@ -28,7 +28,13 @@ function Header({ handleLogOut, mode, changeMode }) {
       <header className="header">
         <h1 className="text-[25px]">Dashboard App with Authentication</h1>
 
-        <div className={mode === "light" ? "modes" : "modes grayd"}>
+        <div
+          className={
+            mode === "light"
+              ? "modes cursor-pointer"
+              : "modes grayd cursor-pointer"
+          }
+        >
           {mode === "light" ? (
             <MdOutlineLightMode onClick={changeMode} />
           ) : (

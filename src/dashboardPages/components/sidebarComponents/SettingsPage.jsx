@@ -17,14 +17,14 @@ function SettingsPage() {
     alert("Profile Updated");
   };
 
-const handleDelete=()=>{
-sessionStorage.removeItem("currentUser")
-navigate("/login")
-}
+  const handleDelete = () => {
+    sessionStorage.removeItem("currentUser");
+    navigate("/login");
+  };
 
   return (
-    <div className="bg-white p-4 rounded-lg w-[400px] ">
-      <h3>Account Settings</h3>
+    <div className="card-page-sidebar bg-white p-4 rounded-lg w-[400px] ">
+      <h3 className="header-title p-2">Account Settings</h3>
 
       {!isEditing ? (
         <div>
@@ -47,7 +47,7 @@ navigate("/login")
             }}
           >
             Edit Profile
-          </button>{" "}
+          </button>
           <br />
           <button
             className="button-global"
@@ -94,7 +94,8 @@ navigate("/login")
               />
             </label>
             <br />
-            <button type="submit"
+            <button
+              type="submit"
               className="bg-yellow-500 hover:bg-yellow-600 rounded-lg p-1 pl-1.5 pr-1.5 m-2
              text-white cursor-pointer"
             >

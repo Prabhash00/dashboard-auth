@@ -1,12 +1,13 @@
 import React from "react";
-import { IoMdPhotos } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 import {
   MdPerson,
   MdQueryStats,
   MdSettings,
+  MdOutlineDashboard,
 } from "react-icons/md";
+import { IoMdPhotos } from "react-icons/io";
 import { TiWeatherPartlySunny } from "react-icons/ti";
-import { useNavigate } from "react-router-dom";
 
 function Sidebar({ handleLogOut }) {
   const navigate = useNavigate();
@@ -26,52 +27,44 @@ function Sidebar({ handleLogOut }) {
         <span className="icon close_icon">X</span>
       </div>
       <ul className="sidebar-list">
-        
         <li
           className="sidebar-list-item"
-          onClick={() => {
-            navigate("/profile");
-          }}
+          onClick={() => navigate("/dashboard")}
+        >
+          <MdOutlineDashboard className="icons" />
+          Dashboard
+        </li>
+        <li
+          className="sidebar-list-item"
+          onClick={() => navigate("/dashboard/profile")}
         >
           <MdPerson className="icons" />
           Profile
         </li>
-
         <li
           className="sidebar-list-item"
-          onClick={() => {
-            navigate("/chart");
-          }}
+          onClick={() => navigate("/dashboard/chart")}
         >
           <MdQueryStats className="icons" />
           Stats
         </li>
-
         <li
           className="sidebar-list-item"
-          onClick={() => {
-            navigate("/pic");
-          }}
+          onClick={() => navigate("/dashboard/pic")}
         >
           <IoMdPhotos className="icons" />
           Photo Gallery
         </li>
-
         <li
           className="sidebar-list-item"
-          onClick={() => {
-            navigate("/weather");
-          }}
+          onClick={() => navigate("/dashboard/weather")}
         >
           <TiWeatherPartlySunny className="icons" />
           Weather
         </li>
-
         <li
           className="sidebar-list-item"
-          onClick={() => {
-            navigate("/settings");
-          }}
+          onClick={() => navigate("/dashboard/settings")}
         >
           <MdSettings className="icons" />
           Settings

@@ -34,7 +34,7 @@ if (dob) {
 
 
   return (
-    <div className="bg-white p-4 rounded-lg w-[400px]">
+    <div className="card-page-sidebar bg-white p-4 rounded-lg w-[400px]">
       <div className="header-weather flex justify-center items-center w-auto">
         <h3 className="header-title p-2">Profile & Account Summary</h3>
       </div>
@@ -54,13 +54,12 @@ if (dob) {
           onChange={handleAge}
         />
       </div>
-        <div className="mt-2 ">
-         
-          <p>
-            <strong>Age is: </strong>
-            {age !== null ? `${age} years old` : "Not Set"}
-          </p>
-        </div>
+      <div className="mt-2 ">
+        <p>
+          <strong>Age is: </strong>
+          {age !== null ? `${age} years old` : "Not Set"}
+        </p>
+      </div>
 
       <button
         className="button-global mt-4"

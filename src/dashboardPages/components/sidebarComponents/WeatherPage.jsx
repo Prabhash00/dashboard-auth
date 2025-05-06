@@ -8,7 +8,7 @@ function WeatherPage() {
     useWeather();
 
   return (
-    <div className="card-inner-weather bg-white rounded-lg p-3 w-[750px]">
+    <div className="card-page-sidebar bg-white rounded-lg p-3 w-[750px]">
       <div className="header-weather flex justify-center items-center w-auto">
         <h3 className="header-title p-2">Weather Info</h3>
       </div>
@@ -43,10 +43,8 @@ function WeatherPage() {
               {weather.location.country}
             </strong>
           </p>
-          <p >Temperature: {weather.current.temp_c}°C</p>
-          <p >
-            Condition: {weather.current.condition.text}
-          </p>
+          <p>Temperature: {weather.current.temp_c}°C</p>
+          <p>Condition: {weather.current.condition.text}</p>
           <div className="flex justify-center ">
             <img
               src={weather.current.condition.icon}

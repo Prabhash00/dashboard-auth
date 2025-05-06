@@ -32,7 +32,7 @@ function ImageCarousel({ className }) {
             <img
               src={URL}
               alt={`carousel-image-${index}`}
-              className="w-full h-auto max-h-[50vh] object-contain rounded-lg"
+              className="w-full h-auto max-h-[200px] object-contain rounded-lg"
             />
           </div>
         ))}

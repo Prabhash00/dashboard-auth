@@ -75,7 +75,7 @@ function ChartPage() {
 
   return (
     <>
-      <div className="card-inner-weather bg-white rounded-lg p-3 w-[750px] space-y-4">
+      <div className="card-page-sidebar bg-white rounded-lg p-3 w-[750px] space-y-4">
         <div className="header-weather flex justify-center items-center w-auto">
           <h3 className="header-title p-2">Charts And Stats</h3>
         </div>
